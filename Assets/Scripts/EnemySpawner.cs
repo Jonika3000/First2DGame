@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(spawnEnemy(zombieInterval, zombiePrefab));
+        StartCoroutine(spawnEnemy(zombieInterval, zombiePrefab));
     }
 
     // Update is called once per frame
