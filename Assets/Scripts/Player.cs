@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator animator;
-    string currentAnimation;
+    string currentAnimation; 
+    public InventoryManager inventoryManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,13 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    //public void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        inventoryManager.AddItem(itemTmp);
+    //    }
+    //}
     void FixedUpdate()
     {
         float movementHorizontal = Input.GetAxis("Horizontal");

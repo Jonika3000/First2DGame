@@ -8,7 +8,9 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 {
     public Image image;
     public Item item;
+    public Text countText;
     [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentBeforeDrag;
     private void Start()
     {
@@ -21,10 +23,17 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         transform.SetAsLastSibling();
         image.raycastTarget = false;
     }
+    public void RefreshCount()
+    {
+        countText.text = count.ToString();
+        bool TextActive = count > 1;
+        countText.gameObject.SetActive(TextActive);
+    }
     public void InitialiseItem(Item newItem)
     {
         item = newItem;
         image.sprite = newItem.image;
+        RefreshCount();
 
     }
     public void OnDrag(PointerEventData eventData)
