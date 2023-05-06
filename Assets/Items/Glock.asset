@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7acda0904ecec64b9edc47cd2e795d5, type: 3}
-  m_Name: Wheat
+  m_Name: Glock
   m_EditorClassIdentifier: 
   Tile: {fileID: 0}
   type: 0
   actionType: 0
   range: {x: 5, y: 4}
-  stackable: 1
-  image: {fileID: -1934698096, guid: fbc7eb73a121975499e13d93fbdb5a29, type: 3}
+  stackable: 0
+  image: {fileID: -506170004, guid: 6f0452d1e8323824f9c43ffa2f476db4, type: 3}

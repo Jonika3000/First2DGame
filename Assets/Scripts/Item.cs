@@ -16,12 +16,10 @@ public class Item : ScriptableObject
     public Sprite image;
 }
 public enum ItemType
-{
-    Block,
-    Tool
+{ 
+    Weapon 
 }
 public enum ActionType
 {
-    Block,
-    Tool
+    Glock 
 }
