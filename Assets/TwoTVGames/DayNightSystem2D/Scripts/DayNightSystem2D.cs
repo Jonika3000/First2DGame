@@ -1,8 +1,17 @@
-﻿using UnityEngine;
-using UnityEngine.Rendering.Universal;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 
-public enum DayCycles 
+/*
+- Creator:    Two TV Games (@gallighanmaker)
+- Script:     Day And Night 2D System
+- Unity:      2019 LTS Version
+- Email:      leandrovieira92@gmail.com
+- Github:     https://github.com/leandrovieiraa
+*/
+
+public enum DayCycles // Enum with day and night cycles, you can change or modify with whatever you want
 {
     Sunrise = 0,
     Day = 1,
@@ -16,7 +25,7 @@ public class DayNightSystem2D : MonoBehaviour
     [Header("Controllers")]
     
     [Tooltip("Global light 2D component, we need to use this object to place light in all map objects")]
-    public Light2D globalLight; // global light
+    public UnityEngine.Rendering.Universal.Light2D globalLight; // global light
     
     [Tooltip("This is a current cycle time, you can change for private float but we keep public only for debug")]
     public float cycleCurrentTime = 0; // current cycle time
@@ -46,7 +55,7 @@ public class DayNightSystem2D : MonoBehaviour
 
     [Header("Objects")]
     [Tooltip("Objects to turn on and off based on day night cycles, you can use this example for create some custom stuffs")]
-    public Light2D[] mapLights; // enable/disable in day/night states
+    public UnityEngine.Rendering.Universal.Light2D[] mapLights; // enable/disable in day/night states
 
     void Start() 
     {
@@ -104,7 +113,7 @@ public class DayNightSystem2D : MonoBehaviour
      {
          // loop in light array of objects to enable/disable
          if(mapLights.Length > 0)
-            foreach(Light2D _light in mapLights)
+            foreach(UnityEngine.Rendering.Universal.Light2D _light in mapLights)
                 _light.gameObject.SetActive(status);
      }
 }
