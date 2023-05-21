@@ -34,19 +34,19 @@ public class Player : MonoBehaviour
         transform.position += new Vector3(movementHorizontal, movementVertical, 0) * speed * Time.deltaTime;
         if (movementHorizontal == 0 && movementVertical == 0)
         {
-            ChangeAnim("PlayerIdle");
+            ChangeAnim("Idle");
         }
         else if (movementHorizontal != 0)
         {
-            ChangeAnim("PlayerWalk");
+            ChangeAnim("Walk");
         }
         else if (movementVertical > 0)
         {
-            ChangeAnim("PlayerWalkUp");
+            ChangeAnim("WalkUp");
         }
         else if (movementVertical < 0)
         {
-            ChangeAnim("PlayerWalkDown");
+            ChangeAnim("WalkDown");
         } 
         if (sr)
             sr.flipX = movementHorizontal < 0 ? true : false; 
